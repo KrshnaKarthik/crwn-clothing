@@ -34,10 +34,11 @@ import {signInWithGoogle} from '../../firebase/firebase.utils'
              <FormInput name='email' type='email'  value={this.state.email}  handleChange={this.handleChange}  label='email' required/>
              <FormInput name='password' type='password' value={this.state.password}   handleChange={this.handleChange} label='password'  required/>
            
-
+            <div className='buttons'> 
             <CustomButton type='submit'>Sign In</CustomButton>
-            <CustomButton type='submit' onClick={signInWithGoogle}>{' '}Sign In with Google{' '}</CustomButton>
-             
+            <CustomButton type='submit' onClick={signInWithGoogle} isGoogleSignIn>{' '}Sign In with Google{' '}</CustomButton>
+            </div>
+         
              </form>
              </div>
          )
